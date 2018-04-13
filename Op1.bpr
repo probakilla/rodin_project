@@ -319,7 +319,7 @@
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="(∃rp_user⦂users·rp_user∈calling∧¬rp_user∈users ∖ calling)∨(∃hang_user⦂users·hang_user∈calling)∨(∃call_user⦂users·call_user∈breakdown∧¬call_user∈calling)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="(∃bd_user⦂users·⊤∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

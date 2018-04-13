@@ -13,7 +13,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Repair"/>
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="rp_user"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rp_user ∈ calling"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="rp_user ∉ users ∖ calling"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="rp_user ∉ (users ∖ calling)"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="breakdown ≔ breakdown ∖ {rp_user}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="calling ≔ calling ∖ {rp_user}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
@@ -30,5 +30,5 @@
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="call_user ∉ calling"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="calling ≔ calling ∪ {call_user}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="1" org.eventb.core.label="DLF" org.eventb.core.predicate="(∃rp_user· rp_user ∈ calling ∧ rp_user ∉ users ∖ calling) ∨&#10;(∃hang_user· hang_user ∈ calling) ∨&#10;(∃call_user· call_user ∈ breakdown ∧ call_user ∉ calling)  " org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="DLF" org.eventb.core.predicate="(∃rp_user· rp_user ∈ calling ∧ rp_user ∉ (users ∖ calling)) ∨&#10;(∃hang_user· hang_user ∈ calling) ∨&#10;(∃call_user· call_user ∈ breakdown ∧ call_user ∉ calling)  " org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
