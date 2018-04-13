@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Op0"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="Users"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="breakdown"/>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="calling ≔ ∅" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Breakdown"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Repair">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Repair"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="rp_user"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rp_user ∈ calling"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="rp_user ∉ users ∖ calling"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="breakdown ≔ breakdown ∖ {rp_user}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="calling ≔ calling ∖ {rp_user}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="calling"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv1" org.eventb.core.predicate="calling ⊆ breakdown"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="HangUp">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="hang_user ∈ calling"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="hang_user"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="calling ≔ calling ∖ {hang_user}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Calling">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ breakdown"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="call_user"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="call_user ∉ calling"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="calling ≔ calling ∪ {call_user}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="1" org.eventb.core.label="DLF" org.eventb.core.predicate="(∃rp_user· rp_user ∈ calling ∧ rp_user ∉ users ∖ calling) ∨&#10;(∃hang_user· hang_user ∈ calling) ∨&#10;(∃call_user· call_user ∈ breakdown ∧ call_user ∉ calling)  " org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>
