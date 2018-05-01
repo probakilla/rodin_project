@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Op1"/>
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M2_OperatorAnswer"/>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="Users"/>
+<org.eventb.core.seesContext name="5" org.eventb.core.target="Operator"/>
 <org.eventb.core.variable name="3" org.eventb.core.identifier="online"/>
 <org.eventb.core.variable name="(" org.eventb.core.identifier="breakdown"/>
 <org.eventb.core.variable name="-" org.eventb.core.identifier="calling"/>
-<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="online ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="(" org.eventb.core.assignment="waiting_list ≔ ∅" org.eventb.core.label="act5"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Breakdown"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Repair">
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Repair">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Repair"/>
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="rp_user"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rp_user ∈ calling"/>
@@ -24,27 +25,40 @@
 <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="ans_op ∈ ran (online)"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="rp_user ↦ ans_op ∈ online"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="online ≔ online ∖ {rp_user ↦ ans_op}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd7" org.eventb.core.predicate="rp_user ∉ dom (waiting_list)"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="HangUp">
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="HangUp">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="HangUp"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="hang_user ∈ calling"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="hang_user"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="calling ≔ calling ∖ {hang_user}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="hang_user ∉ dom (online)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="hang_user ∉ dom (waiting_list)"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Calling">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Calling"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ breakdown"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="call_user"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="call_user ∉ calling"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="calling ≔ calling ∪ {call_user}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="call_user ∉ dom (waiting_list)"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="priority"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="priority ∈ ℕ"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="waiting_list (call_user) ≔ priority" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="4" org.eventb.core.label="inv1" org.eventb.core.predicate="online ∈ calling ⤔ operators"/>
-<org.eventb.core.seesContext name="5" org.eventb.core.target="Operator"/>
-<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Answer">
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Answer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Answer"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ calling"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="call_user"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="priority"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="ans_op"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="ans_op ∈ operators"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="call_user ∉ dom (online)"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∉ ran (online)"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="online ≔ online ∪ {call_user ↦ ans_op}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="call_user ↦ priority ∈ waiting_list"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="waiting_list ≔ waiting_list ∖ {call_user ↦ priority}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="7" org.eventb.core.label="DLF" org.eventb.core.predicate="(∃rp_user· rp_user ∈ calling ∧ rp_user ∉ (users ∖ calling) ∧ rp_user ∈ dom (online) ∧ ∃ans_op· ans_op ∈ operators ∧ ans_op ∈ ran (online) ∧ rp_user ↦ ans_op ∈ online) ∨ &#10;(∃hang_user· hang_user ∈ calling ∧ hang_user ∉ dom (online)) ∨ &#10;(∃call_user· call_user ∈ calling ∧ ∃ans_op· ans_op ∈ operators ∧ call_user ∉ dom (online) ∧ ans_op ∉ ran (online))&#10;" org.eventb.core.theorem="true"/>
+<org.eventb.core.variable name="?" org.eventb.core.identifier="waiting_list"/>
+<org.eventb.core.invariant name="@" org.eventb.core.label="inv2" org.eventb.core.predicate="waiting_list ∈ calling ⇸ ℕ"/>
 </org.eventb.core.machineFile>
