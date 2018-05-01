@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="14">
+<org.eventb.core.poFile org.eventb.core.poStamp="19">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="operators" org.eventb.core.type="ℙ(operators)"/>
@@ -29,15 +29,15 @@
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowo" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowo" org.eventb.core.poStamp="5"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="bd_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Repair/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="12">
+<org.eventb.core.poSequent name="Repair/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="19">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="online ∖ {rp_user ↦ ans_op}∈calling ∖ {rp_user} ⤔ operators" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,"/>
@@ -46,7 +46,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#Repair\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Repair/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="12">
+<org.eventb.core.poSequent name="Repair/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="19">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rp_user∈breakdown" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,"/>
@@ -54,7 +54,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#Repair\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Repair/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="12">
+<org.eventb.core.poSequent name="Repair/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="19">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rp_user∉users ∖ breakdown" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,"/>
@@ -62,14 +62,14 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#Repair\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
 <org.eventb.core.poIdentifier name="ans_op" org.eventb.core.type="operators"/>
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="online'" org.eventb.core.type="ℙ(users×operators)"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="rp_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="19">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈calling" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ calling" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rp_user∈dom(online)" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0|org.eventb.core.guard#,"/>
@@ -77,7 +77,7 @@
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ans_op∈ran(online)" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0|org.eventb.core.guard#1"/>
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="rp_user ↦ ans_op∈online" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#0|org.eventb.core.guard#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="HangUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="HangUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowr"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="online∈calling ∖ {hang_user} ⤔ operators" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#0"/>
@@ -86,15 +86,15 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#HangUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowr" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowr" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="hang_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowr" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowr" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowr" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowr" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hang_user∈calling" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#1|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hang_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#1|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdows"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="online∈calling∪{call_user} ⤔ operators" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/"/>
@@ -103,15 +103,15 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#Calling\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdows" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdows" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="call_user" org.eventb.core.type="users"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdows" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdows" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdows" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdows" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈breakdown" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="call_user∉calling" org.eventb.core.source="/Operat.eur.rice/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Answer/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="Answer/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="online∪{call_user ↦ ans_op}∈calling ⤔ operators" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#6"/>
@@ -119,12 +119,12 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poSequent#Answer\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowt" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowt" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ans_op" org.eventb.core.type="operators"/>
 <org.eventb.core.poIdentifier name="online'" org.eventb.core.type="ℙ(users×operators)"/>
 <org.eventb.core.poIdentifier name="call_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowt" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowt" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowt" org.eventb.core.parentSet="/Operat.eur.rice/M2_OperatorAnswer.bpo|org.eventb.core.poFile#M2_OperatorAnswer|org.eventb.core.poPredicateSet#EVTIDENTbreakdowt" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈calling" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#6|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ans_op∈operators" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#6|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="call_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M2_OperatorAnswer.bum|org.eventb.core.machineFile#M2_OperatorAnswer|org.eventb.core.event#6|org.eventb.core.guard#+"/>

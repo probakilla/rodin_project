@@ -24,8 +24,30 @@
 <org.eventb.core.event name="L" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Calling"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="M" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Answer">
+<org.eventb.core.event name="M" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Answer">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Answer"/>
+<org.eventb.core.parameter name="internal1" org.eventb.core.comment=" Un utilisateur" org.eventb.core.identifier="call_user"/>
+<org.eventb.core.parameter name="internal2" org.eventb.core.comment=" Un opérateur" org.eventb.core.identifier="ans_op"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="priority"/>
+<org.eventb.core.guard name="internal1" org.eventb.core.comment="call_user est en train d'appeller" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ calling"/>
+<org.eventb.core.guard name="internal2" org.eventb.core.comment=" ans_op est un opérateur" org.eventb.core.label="grd2" org.eventb.core.predicate="ans_op ∈ operators"/>
+<org.eventb.core.guard name="internal3" org.eventb.core.comment=" call_user est en relation avec un opérateur" org.eventb.core.label="grd3" org.eventb.core.predicate="call_user ∉ dom (online)"/>
+<org.eventb.core.guard name="internal4" org.eventb.core.comment=" ans_op est en relation avec un utilisateur" org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∉ ran (online)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="call_user ↦ priority ∈ waiting_list"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="online ≔ online ∪ {call_user ↦ ans_op}" org.eventb.core.comment=" ans_op et call_user entre en communication" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="waiting_list ≔ waiting_list ∖ {call_user ↦ priority}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name=";" org.eventb.core.label="grd6" org.eventb.core.predicate="user ∈ dom (waiting_list)"/>
+<org.eventb.core.guard name="=" org.eventb.core.label="grd7" org.eventb.core.predicate="user ∈ dom (priority_list)"/>
+<org.eventb.core.guard name="&gt;" org.eventb.core.label="grd8" org.eventb.core.predicate="call_user ∈ dom (priority_list)"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd9" org.eventb.core.predicate="priority_list(call_user) = time"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd10" org.eventb.core.predicate="(user ↦ priority_user) ∈ waiting_list ⇒ priority_list (user) ≥ time"/>
+<org.eventb.core.guard name="8" org.eventb.core.label="grd11" org.eventb.core.predicate="time ∈ ℕ"/>
+<org.eventb.core.guard name="9" org.eventb.core.label="grd12" org.eventb.core.predicate="call_user ∈ dom (waiting_list)"/>
+<org.eventb.core.parameter name="2" org.eventb.core.identifier="time"/>
+<org.eventb.core.action name="7" org.eventb.core.assignment="priority_list ≔ priority_list ∖ {call_user ↦ time}" org.eventb.core.label="act3"/>
+<org.eventb.core.parameter name="?" org.eventb.core.identifier="priority_user"/>
+<org.eventb.core.parameter name=":" org.eventb.core.identifier="user"/>
+<org.eventb.core.guard name="internal5" org.eventb.core.label="grd13" org.eventb.core.predicate="ans_op ∉ in_pause"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="N" org.eventb.core.identifier="in_pause"/>
 <org.eventb.core.invariant name="O" org.eventb.core.label="inv1" org.eventb.core.predicate="in_pause ⊆ operators"/>

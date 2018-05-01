@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="87">
+<org.eventb.core.poFile org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="68">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="operators" org.eventb.core.type="ℙ(operators)"/>
@@ -55,15 +55,15 @@
 <org.eventb.core.poIdentifier name="priority_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisu" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisu" org.eventb.core.poStamp="68"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="68">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="90">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="bd_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisv" org.eventb.core.poStamp="87">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisv" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Repair/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="75">
+<org.eventb.core.poSequent name="Repair/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="priority_list∈calling ∖ {rp_user} ⇸ ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#I"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8"/>
@@ -72,14 +72,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Repair\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="68">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="90">
 <org.eventb.core.poIdentifier name="ans_op" org.eventb.core.type="operators"/>
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="online'" org.eventb.core.type="ℙ(users×operators)"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="rp_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisw" org.eventb.core.poStamp="75">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisw" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rp_user∈dom(online)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal3"/>
@@ -88,7 +88,7 @@
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="rp_user ↦ ans_op∈online" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal6"/>
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="rp_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#2"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="HangUp/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="73">
+<org.eventb.core.poSequent name="HangUp/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="priority_list∈calling ∖ {hang_user} ⇸ ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#I"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9"/>
@@ -97,16 +97,16 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#HangUp\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="90">
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="hang_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisx" org.eventb.core.poStamp="72">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisx" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hang_user∈calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hang_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="hang_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="date+1∈ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#H"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#:"/>
@@ -115,7 +115,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Calling\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Calling/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poSequent name="Calling/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="priority_list{call_user ↦ date}∈calling∪{call_user} ⇸ ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#I"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#:"/>
@@ -124,7 +124,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Calling\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Calling/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="82">
+<org.eventb.core.poSequent name="Calling/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(waiting_list{call_user ↦ priority})=dom(priority_list{call_user ↦ date})" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#J"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#:"/>
@@ -133,7 +133,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Calling\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Calling/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="82">
+<org.eventb.core.poSequent name="Calling/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="priority∈ℕ" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#:|org.eventb.core.guard#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#:"/>
@@ -141,7 +141,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Calling\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="77">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="waiting_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="call_user" org.eventb.core.type="users"/>
@@ -149,26 +149,26 @@
 <org.eventb.core.poIdentifier name="priority_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="priority" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisy" org.eventb.core.poStamp="82">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisy" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈breakdown" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="call_user∉calling" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="call_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="priority∈ℕ1" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="call_user∉dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Answer/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="86">
+<org.eventb.core.poSequent name="Answer/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz\/"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="call_user∈dom(priority_list)∧priority_list∈users ⇸ ℤ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#3"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz\/"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Answer/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="86">
+<org.eventb.core.poSequent name="Answer/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz0"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="user ↦ priority_user∈waiting_list⇒user∈dom(priority_list)∧priority_list∈users ⇸ ℤ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#4"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Answer/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="85">
+<org.eventb.core.poSequent name="Answer/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="priority_list ∖ {call_user ↦ time}∈calling ⇸ ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#I"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#;"/>
@@ -177,7 +177,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Answer\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="Answer/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="85">
+<org.eventb.core.poSequent name="Answer/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTALLHYPpriority_lisz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(waiting_list ∖ {call_user ↦ priority})=dom(priority_list ∖ {call_user ↦ time})" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.invariant#J"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#;"/>
@@ -186,7 +186,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poSequent#Answer\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="68">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="waiting_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="time" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="priority_user" org.eventb.core.type="ℤ"/>
@@ -210,7 +210,7 @@
 <org.eventb.core.poPredicateSet name="EVTHYPpriority_lisz0" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz\/" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="priority_list(call_user)=time" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#3"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz0" org.eventb.core.poStamp="85">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M4_OldnessPriority.bpo|org.eventb.core.poFile#M4_OldnessPriority|org.eventb.core.poPredicateSet#EVTHYPpriority_lisz0" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="user ↦ priority_user∈waiting_list⇒priority_list(user)≥time" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#4"/>
 <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="time∈ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#8"/>
 <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="call_user∈dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#9"/>

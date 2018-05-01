@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="32">
+<org.eventb.core.poFile org.eventb.core.poStamp="36">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="13">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="operators" org.eventb.core.type="ℙ(operators)"/>
@@ -33,22 +33,22 @@
 <org.eventb.core.poIdentifier name="priority_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisu" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisu" org.eventb.core.poStamp="13"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="bd_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisv" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisv" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisv" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="ans_op" org.eventb.core.type="operators"/>
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="online'" org.eventb.core.type="ℙ(users×operators)"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="rp_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisw" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisw" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisw" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rp_user∈dom(online)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal3"/>
@@ -57,16 +57,16 @@
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="rp_user ↦ ans_op∈online" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#internal6"/>
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="rp_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#8|org.eventb.core.guard#2"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="hang_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisx" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisx" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisx" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hang_user∈calling" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hang_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="hang_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M3_PriorityCall.bum|org.eventb.core.machineFile#M3_PriorityCall|org.eventb.core.event#9|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="waiting_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="call_user" org.eventb.core.type="users"/>
@@ -74,14 +74,14 @@
 <org.eventb.core.poIdentifier name="priority_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="priority" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisy" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisy" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisy" org.eventb.core.poStamp="35">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈breakdown" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#internal1"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="call_user∉calling" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#internal2"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="call_user∉dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="priority∈ℕ1" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="call_user∉dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#D|org.eventb.core.guard#1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="35">
 <org.eventb.core.poIdentifier name="waiting_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="time" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="priority_user" org.eventb.core.type="ℤ"/>
@@ -92,33 +92,34 @@
 <org.eventb.core.poIdentifier name="priority_list'" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.poIdentifier name="priority" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisz" org.eventb.core.poStamp="31">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈calling" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#internal1"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ans_op∈operators" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#internal2"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="call_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#internal3"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ans_op∉ran(online)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#internal4"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="call_user ↦ priority∈waiting_list" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#\/"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="user∈dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#;"/>
-<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="user∈dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#="/>
-<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="call_user∈dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#&gt;"/>
-<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="priority_list(call_user)=time" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#3"/>
-<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="user ↦ priority_user∈waiting_list⇒priority_list(user)≥time" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#4"/>
-<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="time∈ℕ" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#8"/>
-<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="call_user∈dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M4_OldnessPriority.bum|org.eventb.core.machineFile#M4_OldnessPriority|org.eventb.core.event#E|org.eventb.core.guard#9"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lisz" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lisz" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈calling" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#internal1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ans_op∈operators" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#internal2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="call_user∉dom(online)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#internal3"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ans_op∉ran(online)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#internal4"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="call_user ↦ priority∈waiting_list" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="user∈dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#;"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="user∈dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#="/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="call_user∈dom(priority_list)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#&gt;"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="priority_list(call_user)=time" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#3"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="user ↦ priority_user∈waiting_list⇒priority_list(user)≥time" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#4"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="time∈ℕ" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#8"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="call_user∈dom(waiting_list)" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#9"/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="ans_op∉in_pause" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#M|org.eventb.core.guard#internal5"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lis{" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lis{" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="in_pause'" org.eventb.core.type="ℙ(operators)"/>
 <org.eventb.core.poIdentifier name="operator" org.eventb.core.type="operators"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lis{" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lis{" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lis{" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lis{" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="operator∈operators" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#P|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="operator∉in_pause" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#P|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lis|" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTIDENTpriority_lis|" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="in_pause'" org.eventb.core.type="ℙ(operators)"/>
 <org.eventb.core.poIdentifier name="operator" org.eventb.core.type="operators"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lis|" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lis\|" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="EVTALLHYPpriority_lis|" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#EVTIDENTpriority_lis\|" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="operator∈in_pause" org.eventb.core.source="/Operat.eur.rice/M5_Pause.bum|org.eventb.core.machineFile#M5_Pause|org.eventb.core.event#Q|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Operat.eur.rice/M5_Pause.bpo|org.eventb.core.poFile#M5_Pause|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="13">
