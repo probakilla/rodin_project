@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment=" Un opérateur répond au client" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="M1_ClientCalling"/>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="Users"/>
-<org.eventb.core.variable name="3" org.eventb.core.identifier="online"/>
-<org.eventb.core.variable name="(" org.eventb.core.identifier="breakdown"/>
-<org.eventb.core.variable name="-" org.eventb.core.identifier="calling"/>
+<org.eventb.core.variable name="3" org.eventb.core.comment=" Ensemble des conversation utilisateur -&gt; opérateur" org.eventb.core.identifier="online"/>
+<org.eventb.core.variable name="(" org.eventb.core.comment=" Ensemble d'utilisateurs en panne (sous ensemble de users)" org.eventb.core.identifier="breakdown"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment=" Sous-ensemble des utilisateurs en panne qui appellent pour obtenir des réparations" org.eventb.core.identifier="calling"/>
 <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="online ≔ ∅" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
+<org.eventb.core.event name="/" org.eventb.core.comment=" L'utilisateur tombe en panne" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Breakdown"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Repair">
+<org.eventb.core.event name="0" org.eventb.core.comment=" Réparation du service de l'utilisateur" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Repair">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Repair"/>
-<org.eventb.core.parameter name="'" org.eventb.core.identifier="rp_user"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rp_user ∈ calling"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="rp_user ∉ (users ∖ calling)"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="breakdown ≔ breakdown ∖ {rp_user}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="calling ≔ calling ∖ {rp_user}" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="rp_user ∈ dom (online)"/>
-<org.eventb.core.parameter name="-" org.eventb.core.identifier="ans_op"/>
-<org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∈ operators"/>
-<org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="ans_op ∈ ran (online)"/>
-<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="rp_user ↦ ans_op ∈ online"/>
-<org.eventb.core.action name="/" org.eventb.core.assignment="online ≔ online ∖ {rp_user ↦ ans_op}" org.eventb.core.label="act3"/>
+<org.eventb.core.parameter name="internal1" org.eventb.core.comment=" Un utilisateur en panne à qui on répare son service" org.eventb.core.identifier="rp_user"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="calling ≔ calling ∖ {rp_user}" org.eventb.core.comment=" L'utilisateur n'est plus en train d'appeller" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment=" rp_user est en train d'appeller" org.eventb.core.label="grd1" org.eventb.core.predicate="rp_user ∈ calling"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment=" rp_user n'est pas dans le complémentaire de calling" org.eventb.core.label="grd2" org.eventb.core.predicate="rp_user ∉ (users ∖ calling)"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="breakdown ≔ breakdown ∖ {rp_user}" org.eventb.core.comment=" La panne de l'utilisateur est reparée" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="," org.eventb.core.comment=" rp_user est en relation avec un opérateur" org.eventb.core.label="grd3" org.eventb.core.predicate="rp_user ∈ dom (online)"/>
+<org.eventb.core.parameter name="-" org.eventb.core.comment=" Un opérateur en ligne avec l'utilisateur" org.eventb.core.identifier="ans_op"/>
+<org.eventb.core.guard name="0" org.eventb.core.comment=" ans_op est un opérateur" org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∈ operators"/>
+<org.eventb.core.guard name="1" org.eventb.core.comment=" ans_op est en relation avec un utilisateur" org.eventb.core.label="grd5" org.eventb.core.predicate="ans_op ∈ ran (online)"/>
+<org.eventb.core.guard name="." org.eventb.core.comment=" rp_user et ans_op sont en communication" org.eventb.core.label="grd6" org.eventb.core.predicate="rp_user ↦ ans_op ∈ online"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="online ≔ online ∖ {rp_user ↦ ans_op}" org.eventb.core.comment=" Il n'y a plus de communication entre rp_user et ans_op" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="HangUp">
+<org.eventb.core.event name="1" org.eventb.core.comment=" L'appelle se solde par une coupure sans réparation" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="HangUp">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="HangUp"/>
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="hang_user ∈ calling"/>
-<org.eventb.core.parameter name="(" org.eventb.core.identifier="hang_user"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="calling ≔ calling ∖ {hang_user}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="hang_user ∉ dom (online)"/>
+<org.eventb.core.guard name="'" org.eventb.core.comment=" hang_user est un utilisateur" org.eventb.core.label="grd1" org.eventb.core.predicate="hang_user ∈ calling"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment=" Un utilisateur" org.eventb.core.identifier="hang_user"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="calling ≔ calling ∖ {hang_user}" org.eventb.core.comment=" L'utilisateur n'est plus en communication" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment=" hang_user est en communication avec un opérateur" org.eventb.core.label="grd2" org.eventb.core.predicate="hang_user ∉ dom (online)"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
+<org.eventb.core.event name="2" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Calling"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="4" org.eventb.core.label="inv1" org.eventb.core.predicate="online ∈ calling ⤔ operators"/>
+<org.eventb.core.invariant name="4" org.eventb.core.comment=" online est un ensemble de conversations" org.eventb.core.label="inv1" org.eventb.core.predicate="online ∈ calling ⤔ operators"/>
 <org.eventb.core.seesContext name="5" org.eventb.core.target="Operator"/>
-<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Answer">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ calling"/>
-<org.eventb.core.parameter name="(" org.eventb.core.identifier="call_user"/>
-<org.eventb.core.parameter name=")" org.eventb.core.identifier="ans_op"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="ans_op ∈ operators"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="call_user ∉ dom (online)"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∉ ran (online)"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="online ≔ online ∪ {call_user ↦ ans_op}" org.eventb.core.label="act1"/>
+<org.eventb.core.event name="6" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Answer">
+<org.eventb.core.guard name="'" org.eventb.core.comment="call_user est en train d'appeller" org.eventb.core.label="grd1" org.eventb.core.predicate="call_user ∈ calling"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment=" Un utilisateur" org.eventb.core.identifier="call_user"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment=" Un opérateur" org.eventb.core.identifier="ans_op"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment=" ans_op est un opérateur" org.eventb.core.label="grd2" org.eventb.core.predicate="ans_op ∈ operators"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment=" call_user est en relation avec un opérateur" org.eventb.core.label="grd3" org.eventb.core.predicate="call_user ∉ dom (online)"/>
+<org.eventb.core.guard name="," org.eventb.core.comment=" ans_op est en relation avec un utilisateur" org.eventb.core.label="grd4" org.eventb.core.predicate="ans_op ∉ ran (online)"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="online ≔ online ∪ {call_user ↦ ans_op}" org.eventb.core.comment=" ans_op et call_user entre en communication" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

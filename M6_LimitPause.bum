@@ -3,9 +3,9 @@
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="M5_Pause"/>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="Users"/>
 <org.eventb.core.seesContext name="5" org.eventb.core.target="Operator"/>
-<org.eventb.core.variable name="3" org.eventb.core.identifier="online"/>
-<org.eventb.core.variable name="(" org.eventb.core.identifier="breakdown"/>
-<org.eventb.core.variable name="-" org.eventb.core.identifier="calling"/>
+<org.eventb.core.variable name="3" org.eventb.core.comment=" Ensemble des conversation utilisateur -&gt; opérateur" org.eventb.core.identifier="online"/>
+<org.eventb.core.variable name="(" org.eventb.core.comment=" Ensemble d'utilisateurs en panne (sous ensemble de users)" org.eventb.core.identifier="breakdown"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment=" Sous-ensemble des utilisateurs en panne qui appellent pour obtenir des réparations" org.eventb.core.identifier="calling"/>
 <org.eventb.core.variable name="?" org.eventb.core.identifier="waiting_list"/>
 <org.eventb.core.variable name="G" org.eventb.core.identifier="date"/>
 <org.eventb.core.variable name="F" org.eventb.core.identifier="priority_list"/>
@@ -13,19 +13,19 @@
 <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="nb_pause ≔ 0" org.eventb.core.label="act9"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
+<org.eventb.core.event name="P" org.eventb.core.comment=" L'utilisateur tombe en panne" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Breakdown">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Breakdown"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Repair">
+<org.eventb.core.event name="Q" org.eventb.core.comment=" Réparation du service de l'utilisateur" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Repair">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Repair"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="HangUp">
+<org.eventb.core.event name="R" org.eventb.core.comment=" L'appelle se solde par une coupure sans réparation" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="HangUp">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="HangUp"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
+<org.eventb.core.event name="S" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Calling">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Calling"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Answer">
+<org.eventb.core.event name="T" org.eventb.core.comment=" Un utilisateur en panne appelle le centre d'appels" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Answer">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Answer"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TakePause">
