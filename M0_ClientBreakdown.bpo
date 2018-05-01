@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="breakdown" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="DLF/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert"/>
+<org.eventb.core.poSequent name="DLF/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowo" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowo" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowo" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowo" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowo" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowo" org.eventb.core.poStamp="3"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="bd_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="2">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="rp_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ breakdown" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈breakdown" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ breakdown" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPUsert" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="breakdown⊆users" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicateSet name="HYPUsert" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="breakdown⊆users" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Operat.eur.rice/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/Operat.eur.rice/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/cfoperator/M0_ClientBreakdown.bpo|org.eventb.core.poFile#M0_ClientBreakdown|org.eventb.core.poPredicateSet#HYPUsert" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

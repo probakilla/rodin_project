@@ -93,21 +93,21 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="HangUp/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="operators,users">
+<org.eventb.core.prProof name="HangUp/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="operators,users">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p10,p5,p7,p8,p3,p1,p12,p13,p16">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p2,p12,p10,p5,p11,p1,p7,p13,p8,p3,p15,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -116,6 +116,8 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
+<org.eventb.core.prIdent name="LIMIT" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="ans_op" org.eventb.core.type="operators"/>
 <org.eventb.core.prIdent name="breakdown" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.prIdent name="calling" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
@@ -124,25 +126,28 @@
 <org.eventb.core.prIdent name="priority_list" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.prIdent name="waiting_list" org.eventb.core.type="ℙ(users×ℤ)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="priority_list∈calling ∖ {hang_user} ⇸ ℕ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="dom(waiting_list)=dom(priority_list)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬hang_user∈dom(online)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="calling⊆breakdown"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="hang_user∉dom(waiting_list)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="date∈ℕ"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(∃bd_user⦂users·¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="hang_user∈calling"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬hang_user∈dom(waiting_list)"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="breakdown⊆users"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="waiting_list∈calling ⇸ ℕ"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="(∃bd_user⦂users·⊤∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="priority_list∈calling ⇸ ℕ"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="hang_user∉dom(online)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="online∈calling ⤔ operators"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="dom(waiting_list)=dom(priority_list)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="calling⊆breakdown"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="hang_user ↦ ans_op∈online"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="hang_user∉dom(waiting_list)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="date∈ℕ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="ans_op∈operators"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="LIMIT∈ℕ"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="(∃bd_user⦂users·¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="hang_user∈calling"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ans_op∈ran(online)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬hang_user∈dom(waiting_list)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="breakdown⊆users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="waiting_list∈calling ⇸ ℕ"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="(∃bd_user⦂users·⊤∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="priority_list∈calling ⇸ ℕ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧¬bd_user∈breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧¬rp_user∈users ∖ breakdown)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="online∈calling ⤔ operators"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="hang_user∈dom(online)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Calling/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="operators,users">
 <org.eventb.core.lang name="L"/>
@@ -361,9 +366,9 @@
 <org.eventb.core.prIdent name="priority_user" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="user" org.eventb.core.type="users"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Calling/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="operators,users">
