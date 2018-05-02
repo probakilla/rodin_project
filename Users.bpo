@@ -3,5 +3,5 @@
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/cfoperator/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/cfoperatorold/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1"/>
 </org.eventb.core.poFile>

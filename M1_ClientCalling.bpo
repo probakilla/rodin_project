@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="breakdown" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="calling" org.eventb.core.type="ℙ(users)"/>
-<org.eventb.core.poPredicate name="breakdowo" org.eventb.core.predicate="breakdown⊆users" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#*"/>
-<org.eventb.core.poPredicate name="breakdowp" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="breakdowo" org.eventb.core.predicate="breakdown⊆users" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="breakdowp" org.eventb.core.predicate="(∃bd_user⦂users·bd_user∈users∧bd_user∉breakdown)∨(∃rp_user⦂users·rp_user∈breakdown∧rp_user∉users ∖ breakdown)" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowo"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(users))⊆(∅ ⦂ ℙ(users))" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#*"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(users))⊆(∅ ⦂ ℙ(users))" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowo" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowo" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowo" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowo" org.eventb.core.poStamp="11"/>
-<org.eventb.core.poSequent name="Breakdown/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowp"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling⊆breakdown∪{bd_user}" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#+"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Breakdown\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowo" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowo" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poSequent name="Breakdown/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowp"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling⊆breakdown∪{bd_user}" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Breakdown\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowp" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="bd_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowp" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowp" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bd_user∈users" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bd_user∉breakdown" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Repair/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowq"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling ∖ {rp_user}⊆breakdown ∖ {rp_user}" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperator/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Repair\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+<org.eventb.core.poSequent name="Repair/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling ∖ {rp_user}⊆breakdown ∖ {rp_user}" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/cfoperatorold/M0_ClientBreakdown.bum|org.eventb.core.machineFile#M0_ClientBreakdown|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Repair\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowq" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="breakdown'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="rp_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowq" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowq" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rp_user∈breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rp_user∉users ∖ breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#,|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="HangUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowr"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling ∖ {hang_user}⊆breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#0"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#HangUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+<org.eventb.core.poSequent name="HangUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdowr"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling ∖ {hang_user}⊆breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#HangUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowr" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdowr" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 <org.eventb.core.poIdentifier name="hang_user" org.eventb.core.type="users"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowr" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowr" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hang_user∈calling" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdowr" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdowr" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hang_user∈calling" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#0|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdows"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling∪{call_user}⊆breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Calling\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+<org.eventb.core.poSequent name="Calling/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTALLHYPbreakdows"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="calling∪{call_user}⊆breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poSequent#Calling\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTbreakdows" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTIDENTbreakdows" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="call_user" org.eventb.core.type="users"/>
 <org.eventb.core.poIdentifier name="calling'" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdows" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdows" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="call_user∉calling" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPbreakdows" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#EVTIDENTbreakdows" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="call_user∈breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="call_user∉calling" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/cfoperator/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="calling⊆breakdown" org.eventb.core.source="/cfoperator/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/cfoperatorold/M1_ClientCalling.bpo|org.eventb.core.poFile#M1_ClientCalling|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="calling⊆breakdown" org.eventb.core.source="/cfoperatorold/M1_ClientCalling.bum|org.eventb.core.machineFile#M1_ClientCalling|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

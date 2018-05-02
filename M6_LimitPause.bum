@@ -34,8 +34,9 @@
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="operator ∈ operators"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="operator ∉ in_pause"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="in_pause ≔ in_pause ∪ {operator}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="nb_pause &lt; LIMIT"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="nb_pause ≔ nb_pause + 1" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="internal1" org.eventb.core.comment="L'operateur n'est pas déjà en ligne" org.eventb.core.label="grd3" org.eventb.core.predicate="operator ∉ ran(online)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="nb_pause &lt; LIMIT"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StopPause">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="StopPause"/>
